@@ -1,0 +1,185 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #ff4b5c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #fff5f5;
+}
+
+.hero-text {
+    max-width: 50%;
+    padding: 20px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.hero-text .btn {
+    background-color: #ff4b5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hero-text .btn:hover {
+    background-color: #e43a4a;
+}
+
+/* Grid Layout for Menu Items */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    color: #ff4b5c;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.menu-item select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.menu-item button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu-item button:hover {
+    background-color: #e43a4a;
+}
+
+/* Checkout Form Styling */
+.checkout {
+    padding: 50px;
+    text-align: center;
+}
+
+.checkout h2, .checkout h3 {
+    color: #ff4b5c;
+}
+
+.checkout form {
+    margin-top: 30px;
+    max-width: 400px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout input, .checkout select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.checkout button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkout button:hover {
+    background-color: #e43a4a;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}

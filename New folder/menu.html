@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery - Menu</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Paradise Menu</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <section class="filters">
+        <h2>Filter by Dietary Preferences</h2>
+        <label for="dietary-filter">Select Preference:</label>
+        <select id="dietary-filter" onchange="filterMenu()">
+            <option value="all">All</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="dairy-free">Dairy-Free</option>
+        </select>
+    </section>
+
+    <section class="menu">
+        <h2>Our Delicious Pizzas</h2>
+        <div class="menu-grid">
+            <!-- Pizza Item 1 -->
+            <div class="menu-item" data-diet="vegan">
+                <img src="images/2631478c-7d65-4bfd-9c6c-b47ca2659ef6.jpg" alt="Veggie Delight">
+                <h3>Veggie Delight (Vegan)</h3>
+                <p>Fresh vegetables and vegan cheese.</p>
+                <label for="crust">Choose Crust:</label>
+                <select id="crust">
+                    <option>Regular</option>
+                    <option>Gluten-Free</option>
+                </select>
+                <label for="toppings">Choose Toppings:</label>
+                <select id="toppings" multiple>
+                    <option>Mushrooms</option>
+                    <option>Olives</option>
+                    <option>Peppers</option>
+                </select>
+                <button onclick="addToCart('Veggie Delight', 12.99)">Add to Cart - $12.99</button>
+            </div>
+
+            <!-- Pizza Item 2 -->
+            <div class="menu-item" data-diet="gluten-free">
+                <img src="images/60dd3e11-9031-4569-82bb-006adc4d9440.jpg" alt="Meat Lover's">
+                <h3>Meat Lover's (Gluten-Free)</h3>
+                <p>Pepperoni, sausage, bacon, and gluten-free crust.</p>
+                <label for="crust">Choose Crust:</label>
+                <select id="crust">
+                    <option>Gluten-Free</option>
+                    <option>Regular</option>
+                </select>
+                <label for="toppings">Choose Toppings:</label>
+                <select id="toppings" multiple>
+                    <option>Pepperoni</option>
+                    <option>Sausage</option>
+                    <option>Bacon</option>
+                </select>
+                <button onclick="addToCart('Meat Lover\'s', 15.99)">Add to Cart - $15.99</button>
+            </div>
+
+            <!-- Add more pizza items as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizza Paradise</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

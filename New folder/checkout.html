@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery - Checkout</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Back to Menu</a>
+        </nav>
+    </header>
+
+    <section class="checkout">
+        <h2>Your Order</h2>
+        <div id="cart">
+            <!-- Cart items will be displayed here -->
+        </div>
+
+        <h3>Total: <span id="total-price">$0.00</span></h3>
+
+        <h3>Payment Options</h3>
+        <form onsubmit="return validateCheckoutForm()">
+            <label for="payment-method">Choose Payment Method:</label>
+            <select id="payment-method">
+                <option value="credit-card">Credit/Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="apple-pay">Apple Pay</option>
+            </select>
+
+            <h3>Guest Checkout</h3>
+            <label for="email">Enter your email for order updates:</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <h2>Order Status</h2>
+        <div id="order-status">
+            <!-- Order tracking will be updated here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizza Paradise</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+    <script>
+        // Error prevention and validation
+        function validateCheckoutForm() {
+            const email = document.getElementById('email').value;
+            if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            return true;
+        }
+
+        // System status visibility
+        function processOrder() {
+            document.getElementById('order-status').innerText = 'Preparing...';
+            setTimeout(() => {
+                document.getElementById('order-status').innerText = 'Out for Delivery!';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
